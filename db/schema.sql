@@ -18,5 +18,6 @@ CREATE TABLE gear (
     is_user_submitted BOOLEAN,
     is_expensive BOOLEAN,
     image TEXT NOT NULL,
-    link TEXT NOT NULL
+    link TEXT NOT NULL,
+    item_type TEXT NOT NULL
 );

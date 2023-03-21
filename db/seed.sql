@@ -1,9 +1,13 @@
 \c pbs;
 
-INSERT INTO gear (name, price, rating, is_user_submitted, is_expensive, image, link) VALUES
-('ELITE - Mens Core White BJJ Gi', 115, 4.5 , false, false, 'https://cdn.shopify.com/s/files/1/0030/3742/9849/products/Men_sCoreWhiteBrazilianJiuJitsuBJJGi_2_1200x.jpg?v=1660854126', 'https://www.elitesports.com/products/elite-sports-ultra-light-preshrunk-white-adult-brazilian-jiu-jitsu-bjj-gi-with-free-white-belt'),
-('ORIGIN - Everest BJJ Gi', 160, 5, false, true, 'https://cdn11.bigcommerce.com/s-74e08ai/images/stencil/1000x1000/products/379/2277/WHITE_2__38919.1594321465.jpg?c=2', 'https://originmaine.com/bjj-mma-fit/everest-bjj-gi/'),
-('Sanabul- Essentials Short Sleeve Compression Training Rash Gaurd', 22, 4, false, false, 'https://m.media-amazon.com/images/I/51lYO6VCeXL._AC_UX679_.jpg', 'https://a.co/d/ef55AOw'),
-('Phalanx - Metric BLK-WHT Short-Sleeve Rash Guard', 60, 5, false, true, 'https://cdn.shopify.com/s/files/1/0163/5832/products/RGSSMetricblk-whtmen_sshortsleeverashguardfrontleft_4e7d2648-0d9f-4b88-ae35-5f6cfb2f3fe9_1800x1800.jpg?v=1638658358', 'https://phalanxfc.com/collections/rash-guards/products/metric-blk-wht-mens-short-sleeve-rash-guard-1?ref=Jzmn276bxOZog'),
-('Sanabul - BJJ Belts with Sleeve Bar', 10, 4, false, false, 'https://m.media-amazon.com/images/I/81ihW4LOpjL._AC_SX679._SX._UX._SY._UY_.jpg', 'https://a.co/d/2xRQUPl'),
-('Gold - Heavyweight Jiu Jitsue Belts', 18, 5, false, true, 'https://cdn.shopify.com/s/files/1/1820/5765/products/White_1200x.jpg?v=1660255629', 'https://goldbjj.com/products/belts?variant=8691259834478');
+INSERT INTO gear (name, price, rating, is_user_submitted, is_expensive, image, link, item_type) VALUES
+('WAR TRIBE GEAR - Viking Reborn Rash Guard', 59.99, 4.5 , false, false, 'https://wartribegear.com/wp-content/uploads/2021/10/Viking-Reborn-Rash-Guard-Front.png', 'https://wartribegear.com/shop/viking-reborn-rash-guard/', 'rashguard'),
+('WAR TRIBE GEAR - Black Hawk BJJ Rash Guard', 59.99 , 5, false, false, 'https://wartribegear.com/wp-content/uploads/2021/11/Black-Hawk-Rash-Guard-Front.png', 'https://wartribegear.com/shop/black-hawk-black-bjj-rash-guard-black/', 'rashguard'),
+('WAR TRIBE GEAR - Strike Red BJJ Rash Guard', 59.99, 4, false, false, 'https://wartribegear.com/wp-content/uploads/2021/11/Strike-Rash-Guard-Front-600x600.png', 'https://wartribegear.com/shop/strike-bjj-rash-guard/', 'rashguard'),
+('WAR TRIBE GEAR - Lord Of War BJJ Rash Guard', 59.99, 5, false, false, 'https://wartribegear.com/wp-content/uploads/2021/11/Warlord-Rash-Guard-Front.png', 'https://wartribegear.com/shop/warlord-bjj-rash-guard/', 'rashguard'),
+('WAR TRIBE GEAR - Motto Grappling Shorts', 59.99, 4, false, false, 'https://wartribegear.com/wp-content/uploads/2021/11/Motto-Shorts-Black-1.png', 'https://wartribegear.com/shop/motto-shorts-black/', 'shorts'),
+('WAR TRIBE GEAR - Patriot Black Hawk Grappling Shorts', 59.99, 4, false, false, 'https://wartribegear.com/wp-content/uploads/2022/12/WarTribeStoreFrontWeb-364.png', 'https://wartribegear.com/shop/patriot-black-hawk-shorts-black/', 'shorts'),
+('WAR TRIBE GEAR - Patriot Black Hawk Grappling Shorts', 59.99, 4, false, false, 'https://wartribegear.com/wp-content/uploads/2022/12/Black-Hawk-Gray-Shorts-14.png', 'https://wartribegear.com/shop/patriot-black-hawk-shorts-gray/', 'shorts'),
+('WAR TRIBE GEAR - Adult Grappling Shorts', 39.99, 5, false, false, 'https://wartribegear.com/wp-content/uploads/2017/12/Basic-Shorts-2-Shorts-Front-1.png', 'https://wartribegear.com/shop/grappling-short-comp-standard-black/', 'shorts');
+
+-- take images from " https://wartribegear.com/product-category/mens/jiu-jitsu/bjj-rash-guard/ "
