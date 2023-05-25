@@ -2,6 +2,7 @@ const express = require("express");
 const itemController = express();
 const { getAllGear } = require("../queries/gear");
 const { getOneGear } = require("../queries/gear");
+// const { getOneName } = require("../queries/name");
 // * gear
 itemController.get("/", async (req, res) => {
   const gear = await getAllGear();
@@ -27,5 +28,23 @@ itemController.get("/:id", async (req, res) => {
     res.status(500).json();
   }
 });
+
+// itemController.get("/:name", async (req, res) => {
+//   const allCaps = req.query;
+//   const singleName = req.params;
+
+//   try {
+//     if (!singleName) {
+//       throw "Only letters and spaces allowed";
+//     }
+//     if (allCaps === "true") {
+//       res.status(200).send(`HELLO ${singleName.toUpperCase()}`);
+//     } else {
+//       res.status(200).send(`Hello ${singleName}`);
+//     }
+//   } catch (error) {
+//     res.status(500).json({ message: error });
+//   }
+// });
 
 module.exports = itemController;

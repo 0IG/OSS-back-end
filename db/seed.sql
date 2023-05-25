@@ -1,13 +1,21 @@
 \c pbs;
 
-INSERT INTO gear (name, price, rating, is_user_submitted, is_expensive, image, link, item_type) VALUES
-('WAR TRIBE GEAR - Viking Reborn Rash Guard', 59.99, 4.5 , false, false, 'https://wartribegear.com/wp-content/uploads/2021/10/Viking-Reborn-Rash-Guard-Front.png', 'https://wartribegear.com/shop/viking-reborn-rash-guard/', 'rashguard'),
-('WAR TRIBE GEAR - Black Hawk BJJ Rash Guard', 59.99 , 5, false, false, 'https://wartribegear.com/wp-content/uploads/2021/11/Black-Hawk-Rash-Guard-Front.png', 'https://wartribegear.com/shop/black-hawk-black-bjj-rash-guard-black/', 'rashguard'),
-('WAR TRIBE GEAR - Strike Red BJJ Rash Guard', 59.99, 4, false, false, 'https://wartribegear.com/wp-content/uploads/2021/11/Strike-Rash-Guard-Front-600x600.png', 'https://wartribegear.com/shop/strike-bjj-rash-guard/', 'rashguard'),
-('WAR TRIBE GEAR - Lord Of War BJJ Rash Guard', 59.99, 5, false, false, 'https://wartribegear.com/wp-content/uploads/2021/11/Warlord-Rash-Guard-Front.png', 'https://wartribegear.com/shop/warlord-bjj-rash-guard/', 'rashguard'),
-('WAR TRIBE GEAR - Motto Grappling Shorts', 59.99, 4, false, false, 'https://wartribegear.com/wp-content/uploads/2021/11/Motto-Shorts-Black-1.png', 'https://wartribegear.com/shop/motto-shorts-black/', 'shorts'),
-('WAR TRIBE GEAR - Patriot Black Hawk Grappling Shorts', 59.99, 4, false, false, 'https://wartribegear.com/wp-content/uploads/2022/12/WarTribeStoreFrontWeb-364.png', 'https://wartribegear.com/shop/patriot-black-hawk-shorts-black/', 'shorts'),
-('WAR TRIBE GEAR - Patriot Black Hawk Grappling Shorts', 59.99, 4, false, false, 'https://wartribegear.com/wp-content/uploads/2022/12/Black-Hawk-Gray-Shorts-14.png', 'https://wartribegear.com/shop/patriot-black-hawk-shorts-gray/', 'shorts'),
-('WAR TRIBE GEAR - Adult Grappling Shorts', 39.99, 5, false, false, 'https://wartribegear.com/wp-content/uploads/2017/12/Basic-Shorts-2-Shorts-Front-1.png', 'https://wartribegear.com/shop/grappling-short-comp-standard-black/', 'shorts');
+INSERT INTO gear (name, price, rating, is_user_submitted, is_expensive, image, link, property_type, description, materials, color, detail1, detail2, manufactured) VALUES
+('WAR TRIBE GEAR - Viking Reborn Rash Guard',59.99, 4.5 ,false, false,'https://wartribegear.com/wp-content/uploads/2021/10/Viking-Reborn-Rash-Guard-Front.png','https://wartribegear.com/shop/viking-reborn-rash-guard/','rashguard','Black Viking Rashguard','82% Polyester and 18% Spandex','Black','Sublimated graphic','200 GSM','America' ),
+('WAR TRIBE GEAR - Black Hawk BJJ Rash Guard', 59.99 , 5, false, false, 'https://wartribegear.com/wp-content/uploads/2021/11/Black-Hawk-Rash-Guard-Front.png', 'https://wartribegear.com/shop/black-hawk-black-bjj-rash-guard-black/', 'rashguard', 'Black Rashguard', '82% Polyester and 18% Spandex','Black', 'Sublimated graphic', '200 GSM', 'America'),
+('WAR TRIBE GEAR - Strike Red BJJ Rash Guard', 59.99, 4, false, false, 'https://wartribegear.com/wp-content/uploads/2021/11/Strike-Rash-Guard-Front-600x600.png', 'https://wartribegear.com/shop/strike-bjj-rash-guard/', 'rashguard', 'Strike Red Rashguard', '82% Polyester and 18% Spandex','Black/Red', 'Sublimated graphic', '200 GSM', 'America'),
+('WAR TRIBE GEAR - Lord Of War BJJ Rash Guard', 59.99, 5, false, false, 'https://wartribegear.com/wp-content/uploads/2021/11/Warlord-Rash-Guard-Front.png', 'https://wartribegear.com/shop/warlord-bjj-rash-guard/', 'rashguard', 'Black Rashguard', '82% Polyester and 18% Spandex','Black', 'Sublimated graphic', '200 GSM', 'America'),
+('WAR TRIBE GEAR - Motto Grappling Shorts', 59.99, 4, false, false, 'https://i.imgur.com/1vwM0rl.png', 'https://wartribegear.com/shop/motto-shorts-black/', 'shorts', 'Black Grappling Shorts', '82% Polyester and 18% Spandex','Black', 'Sublimated graphic', '200 GSM', 'America'),
+('WAR TRIBE GEAR - Patriot Black Hawk Grappling Shorts', 59.99, 4, false, false, 'https://i.imgur.com/mgTWWLf.png', 'https://wartribegear.com/shop/patriot-black-hawk-shorts-black/', 'shorts', 'Black Grappling Shorts', '82% Polyester and 18% Spandex','Black', 'Sublimated graphic', '200 GSM', 'America'),
+('WAR TRIBE GEAR - Patriot Black Hawk Grappling Shorts', 59.99, 4, false, false, 'https://i.imgur.com/rkPwxy4.png', 'https://wartribegear.com/shop/patriot-black-hawk-shorts-gray/', 'shorts', 'Pink Grappling Shorts', '82% Polyester and 18% Spandex','Pink', 'Sublimated graphic', '200 GSM', 'America'),
+('WAR TRIBE GEAR - Adult Grappling Shorts', 39.99, 5, false, false, 'https://wartribegear.com/wp-content/uploads/2017/12/Basic-Shorts-2-Shorts-Front-1.png', 'https://wartribegear.com/shop/grappling-short-comp-standard-black/', 'shorts', 'Black Grappling Shorts', '82% Polyester and 18% Spandex','Black', 'Sublimated graphic', '200 GSM', 'America'),
+('FUJI - Blossom Rashguard', 59.95, 4, false, false, 'https://fujisports.com/cdn/shop/products/Artboard1_464b6861-13ec-4ee8-bfd1-e10342a549aa_1600x1600.jpg?v=1668734219','https://fujisports.com/products/womens-blossom-rashguard-black-pink', 'rashguard', 'Cherry Blossom Rashguard', '88% Polyester 12% Spandex', 'Black/Pink', 'Antimicrobial', 'Fully Sublimated
+', 'America'),
+('FUJI - Blossom Rashguard', 59.95, 4, false, false, 'https://fujisports.com/cdn/shop/products/Artboard1_8ea9c181-4621-45a5-81b0-8343c7471de9_1600x1600.jpg?v=1668736405','https://fujisports.com/collections/womens-jiu-jitsu-rashguards/products/womens-blossom-rashguard-blue-pink', 'rashguard', 'Cherry Blossom Rashguard', '88% Polyester 12% Spandex', 'Blue/Pink', 'Antimicrobial', 'Fully Sublimated
+', 'America');
 
--- take images from " https://wartribegear.com/product-category/mens/jiu-jitsu/bjj-rash-guard/ "
+
+INSERT INTO users (username, password, email, profileImg, address, zipcode, rating, admin, joinedDate) VALUES 
+('test1', 'test1', 'test1@test.com', 'https://i.imgur.com/8puTSd9.png', '1 test rd', 11111, 3, false, NOW()),
+('test2', 'test2', 'test2@test.com', 'https://i.imgur.com/MmLQSDV.png', '2 test rd', 22222, 1, false, NOW()),
+('test3', 'test3', 'test3@test.com', 'https://i.imgur.com/ZlrcYvd.png', '3 test rd', 33333, 5, true, NOW());
