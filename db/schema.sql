@@ -8,7 +8,7 @@ CREATE DATABASE pbs;
 -- CONNECTING TO THE DATABASE
 \c pbs; 
 
-
+DROP TABLE IF EXISTS gear;
 -- CREATING THE GEAR TABLE
 CREATE TABLE gear (
     id SERIAL PRIMARY KEY,
@@ -25,8 +25,8 @@ CREATE TABLE gear (
     color TEXT NOT NULL,
     detail1 TEXT NOT NULL,
     detail2 TEXT NOT NULL,
-    manufactured TEXT NOT NULL
-    -- sexual_orentation TEXT NOT NULL,
+    manufactured TEXT NOT NULL,
+    wear TEXT NOT NULL
     -- addedDate TIMESTAMP DEFAULT NOW(),
     -- supplier TEXT NOT NULL,
     -- onSale TEXT NOT NULL

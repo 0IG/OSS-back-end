@@ -1,9 +1,17 @@
 const db = require("../db/dbConfig");
 
-const getAllGear = async () => {
+const getAllGear = async (SO) => {
   try {
-    return await db.any("SELECT * FROM gear");
+    let query = "SELECT * FROM gear";
+    if (SO) {
+      query += ` WHERE wear = '${SO}';`;
+    }
+
+    console.log(query);
+
+    return await db.any(query);
   } catch (error) {
+    console.log("error here");
     return error;
   }
 };
@@ -16,7 +24,25 @@ const getOneGear = async (id) => {
   }
 };
 
+const getAllMensGear = async (wear) => {
+  try {
+    return await db.any("SELECT * FROM gear WHERE wear = 'Mens'", wear);
+  } catch (error) {
+    return error;
+  }
+};
+
+const getAllWomensGear = async (wear) => {
+  try {
+    return await db.any("SELECT * FROM gear WHERE wear = 'Womens'", wear);
+  } catch (error) {
+    return error;
+  }
+};
+
 module.exports = {
   getAllGear,
   getOneGear,
+  getAllMensGear,
+  getAllWomensGear,
 };
