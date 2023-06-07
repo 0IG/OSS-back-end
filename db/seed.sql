@@ -1,4 +1,4 @@
-\c pbs;
+\c oss;
 
 INSERT INTO gear (name, price, rating, is_user_submitted, is_expensive, image, link, property_type, description, materials, color, detail1, detail2, manufactured, wear) VALUES
 ('WAR TRIBE GEAR - Viking Reborn Rash Guard',59.99, 4.5 ,false, false,'https://wartribegear.com/wp-content/uploads/2021/10/Viking-Reborn-Rash-Guard-Front.png','https://wartribegear.com/shop/viking-reborn-rash-guard/','rashguard','Black Viking Rashguard','82% Polyester and 18% Spandex','Black','Sublimated graphic','200 GSM','America', 'mens' ),
