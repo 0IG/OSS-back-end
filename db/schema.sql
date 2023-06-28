@@ -26,7 +26,8 @@ CREATE TABLE gear (
     detail1 TEXT NOT NULL,
     detail2 TEXT NOT NULL,
     manufactured TEXT NOT NULL,
-    wear TEXT NOT NULL
+    wear TEXT NOT NULL,
+    designedBy TEXT NOT NULL
     -- addedDate TIMESTAMP DEFAULT NOW(),
     -- supplier TEXT NOT NULL,
     -- onSale TEXT NOT NULL
@@ -45,4 +46,12 @@ CREATE TABLE users (
     rating INT,
     admin BOOLEAN DEFAULT false,
     joinedDate TIMESTAMP DEFAULT NOW()
+);
+
+--CREATING DESIGNERS TABLE
+DROP TABLE IF EXISTS designer;
+CREATE TABLE designer (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    bio TEXT NOT NULL,
 );
