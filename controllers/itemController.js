@@ -12,6 +12,7 @@ const { getAllShortsWomens } = require("../queries/gear");
 const { getAllShortsMens } = require("../queries/gear");
 const { getAllBelts } = require("../queries/gear");
 const { getAllGloves } = require("../queries/gear");
+const { getAllMisc } = require("../queries/gear");
 
 // * gear
 itemController.get("/", async (req, res) => {
@@ -167,6 +168,18 @@ itemController.get("/gloves", async (req, res) => {
     res.json({
       success: true,
       payload: gloves,
+    });
+  } else {
+    res.json(500).json();
+  }
+});
+// Get * Misc Items
+itemController.get("/misc", async (req, res) => {
+  const misc = await getAllMisc();
+  if (misc[0]) {
+    res.json({
+      success: true,
+      payload: misc,
     });
   } else {
     res.json(500).json();

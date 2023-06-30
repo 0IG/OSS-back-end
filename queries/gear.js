@@ -122,11 +122,21 @@ const getAllBelts = async (property_type) => {
     return error;
   }
 };
-
 const getAllGloves = async (property_type) => {
   try {
     return await db.any(
       "SELECT * FROM gear WHERE property_type = 'glove'",
+      property_type
+    );
+  } catch (error) {
+    return error;
+  }
+};
+
+const getAllMisc = async (property_type) => {
+  try {
+    return await db.any(
+      "SELECT * FROM gear WHERE property_type = 'misc'",
       property_type
     );
   } catch (error) {
@@ -147,4 +157,5 @@ module.exports = {
   getAllShortsMens,
   getAllBelts,
   getAllGloves,
+  getAllMisc,
 };
