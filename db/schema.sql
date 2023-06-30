@@ -53,5 +53,5 @@ DROP TABLE IF EXISTS designer;
 CREATE TABLE designer (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
-    bio TEXT NOT NULL,
+    bio TEXT NOT NULL
 );
