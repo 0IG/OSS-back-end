@@ -12,14 +12,13 @@ const { getAllShortsWomens } = require("../queries/gear");
 const { getAllShortsMens } = require("../queries/gear");
 const { getAllBelts } = require("../queries/gear");
 const { getAllGloves } = require("../queries/gear");
-const { getAllMisc } = require("../queries/gear");
 
 // * gear
 itemController.get("/", async (req, res) => {
   // parse query string
-  const { SO } = req.query;
+  const { SO, type } = req.query;
 
-  const gear = await getAllGear(SO);
+  const gear = await getAllGear(SO, type);
   if (gear) {
     res.json({
       success: true,
@@ -53,20 +52,6 @@ itemController.get("/womens", async (req, res) => {
     });
   } else {
     res.json(500).json();
-  }
-});
-
-// singleItem of gear
-itemController.get("/:id", async (req, res) => {
-  const id = req.params.id;
-  const singleItem = await getOneGear(id);
-  if (singleItem) {
-    res.json({
-      success: true,
-      payload: singleItem,
-    });
-  } else {
-    res.status(500).json();
   }
 });
 
@@ -161,7 +146,7 @@ itemController.get("/belts", async (req, res) => {
   }
 });
 
-// pulling all belts
+// pulling all gloves
 itemController.get("/gloves", async (req, res) => {
   const gloves = await getAllGloves();
   if (gloves[0]) {
@@ -173,16 +158,18 @@ itemController.get("/gloves", async (req, res) => {
     res.json(500).json();
   }
 });
-// Get * Misc Items
-itemController.get("/misc", async (req, res) => {
-  const misc = await getAllMisc();
-  if (misc[0]) {
+
+// singleItem of gear
+itemController.get("/:id", async (req, res) => {
+  const id = req.params.id;
+  const singleItem = await getOneGear(id);
+  if (singleItem) {
     res.json({
       success: true,
-      payload: misc,
+      payload: singleItem,
     });
   } else {
-    res.json(500).json();
+    res.status(500).json();
   }
 });
 

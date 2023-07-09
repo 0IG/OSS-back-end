@@ -1,13 +1,26 @@
 const db = require("../db/dbConfig");
 
-const getAllGear = async (SO) => {
+const getAllGear = async (SO, type) => {
   try {
     let query = "SELECT * FROM gear";
+
+    const whereConditions = [];
+
     if (SO) {
-      query += ` WHERE wear = '${SO}';`;
+      whereConditions.push(`wear = '${SO}'`);
     }
 
-    console.log(query);
+    if (type) {
+      whereConditions.push(`property_type = '${type}'`);
+    }
+
+    if (whereConditions.length) {
+      query += " WHERE " + whereConditions.join(" AND ");
+    }
+
+    query += ";";
+
+    console.log(query); // 'Select * From gear WHERE wear = 'womens' '
 
     return await db.any(query);
   } catch (error) {
@@ -125,18 +138,7 @@ const getAllBelts = async (property_type) => {
 const getAllGloves = async (property_type) => {
   try {
     return await db.any(
-      "SELECT * FROM gear WHERE property_type = 'glove'",
-      property_type
-    );
-  } catch (error) {
-    return error;
-  }
-};
-
-const getAllMisc = async (property_type) => {
-  try {
-    return await db.any(
-      "SELECT * FROM gear WHERE property_type = 'misc'",
+      "SELECT * FROM gear WHERE property_type = 'gloves'",
       property_type
     );
   } catch (error) {
@@ -157,5 +159,4 @@ module.exports = {
   getAllShortsMens,
   getAllBelts,
   getAllGloves,
-  getAllMisc,
 };
