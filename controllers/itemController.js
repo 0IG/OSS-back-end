@@ -173,4 +173,18 @@ itemController.get("/:id", async (req, res) => {
   }
 });
 
+//get all Items based on designer
+// itemController.get(`/${designed_by}`, async (req, res) => {
+//   const id = req.params.id;
+//   const allByDesigner = await getAllByDesigner(id);
+//   if (getAllByDesigner) {
+//     res.json({
+//       success: true,
+//       payload: getAllByDesigner,
+//     });
+//   } else {
+//     res.status(500).json();
+//   }
+// });
+
 module.exports = itemController;

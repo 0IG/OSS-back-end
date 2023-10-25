@@ -56,7 +56,7 @@ const getAllWomensGear = async (wear) => {
 const getAllGisMens = async (property_type, wear) => {
   try {
     return await db.any(
-      "SELECT * FROM gear WHERE property_type = 'gi' AND wear = 'Womens'",
+      "SELECT * FROM gear WHERE property_type = 'gi' AND wear = 'mens'",
       property_type,
       wear
     );
@@ -135,6 +135,7 @@ const getAllBelts = async (property_type) => {
     return error;
   }
 };
+
 const getAllGloves = async (property_type) => {
   try {
     return await db.any(
@@ -145,6 +146,17 @@ const getAllGloves = async (property_type) => {
     return error;
   }
 };
+
+// const getAllByDesigner = async () => {
+//   try {
+//     return await db.any(
+//       "SELECT * FROM gear WHERE designed_by === ${}",
+//       property_type
+//     );
+//   } catch (error) {
+//     return error;
+//   }
+// };
 
 module.exports = {
   getAllGear,
@@ -159,4 +171,5 @@ module.exports = {
   getAllShortsMens,
   getAllBelts,
   getAllGloves,
+  // getAllByDesigner,
 };

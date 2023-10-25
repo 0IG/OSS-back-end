@@ -27,7 +27,7 @@ CREATE TABLE gear (
     detail2 TEXT NOT NULL,
     manufactured TEXT NOT NULL,
     wear TEXT NOT NULL,
-    designedBy TEXT NOT NULL
+    designed_by TEXT NOT NULL
     -- addedDate TIMESTAMP DEFAULT NOW(),
     -- supplier TEXT NOT NULL,
     -- onSale TEXT NOT NULL
