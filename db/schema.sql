@@ -8,6 +8,11 @@ CREATE DATABASE oss;
 -- CONNECTING TO THE DATABASE
 \c oss; 
 
+-- Future table elm (ignore for now)
+    -- addedDate TIMESTAMP DEFAULT NOW(),
+    -- supplier TEXT NOT NULL,
+    -- onSale TEXT NOT NULL
+
 DROP TABLE IF EXISTS gear;
 -- CREATING THE GEAR TABLE
 CREATE TABLE gear (
@@ -28,9 +33,6 @@ CREATE TABLE gear (
     manufactured TEXT NOT NULL,
     wear TEXT NOT NULL,
     designed_by TEXT NOT NULL
-    -- addedDate TIMESTAMP DEFAULT NOW(),
-    -- supplier TEXT NOT NULL,
-    -- onSale TEXT NOT NULL
 );
 
 --CREATING USERS TABLE
