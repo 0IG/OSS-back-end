@@ -10,31 +10,11 @@ const app = express();
 
 app.use(cors());
 
-// const upload = multer({
-//   dest: "images",
-// });
-
 const itemController = require("./controllers/itemController");
 
 app.get("/", (req, res) => {
   res.send("hello world :]");
 });
-// Upload Images Local
-// app.post("/upload", upload.single("upload"), (req, res) => {
-//   res.send();
-// });
-
 app.use("/gear", itemController);
-
-// router.post(
-//   "/upload",
-//   upload.single("upload"),
-//   (req, res) => {
-//     res.send();
-//   },
-//   (error, req, res, next) => {
-//     res.status(400).send({ error: error.message });
-//   }
-// );
 
 module.exports = app;
