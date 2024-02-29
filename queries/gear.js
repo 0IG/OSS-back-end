@@ -1,6 +1,7 @@
 const db = require("../db/dbConfig");
 
-const getAllGear = async (SO, type) => {
+const getAllGear = async (SO, type, designer) => {
+  console.log(`Log:`, type, SO, designer);
   try {
     let query = "SELECT * FROM gear";
 
@@ -14,14 +15,18 @@ const getAllGear = async (SO, type) => {
       whereConditions.push(`property_type = '${type}'`);
     }
 
+    if (designer) {
+      whereConditions.push(`designed_by = '${designer}'`);
+    }
+
     if (whereConditions.length) {
       query += " WHERE " + whereConditions.join(" AND ");
     }
 
     query += ";";
 
-    console.log(query); // 'Select * From gear WHERE wear = 'womens' '
-
+    console.log(`Where Conditions:`, whereConditions);
+    console.log(`Query:`, query);
     return await db.any(query);
   } catch (error) {
     console.log("error here");
