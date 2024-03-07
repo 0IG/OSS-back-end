@@ -1,6 +1,6 @@
 const db = require("../db/dbConfig");
 
-const getAllGear = async (SO, type, designer) => {
+const getAllGear = async (SO, type, designer, color) => {
   console.log(`Log:`, type, SO, designer);
   try {
     let query = "SELECT * FROM gear";
@@ -17,6 +17,10 @@ const getAllGear = async (SO, type, designer) => {
 
     if (designer) {
       whereConditions.push(`designed_by = '${designer}'`);
+    }
+
+    if (color) {
+      whereConditions.push(`color = '${color}'`);
     }
 
     if (whereConditions.length) {

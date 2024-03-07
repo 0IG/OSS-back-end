@@ -6,9 +6,9 @@ const { getOneGear } = require("../queries/gear");
 // * gear
 itemController.get("/", async (req, res) => {
   // parse query string
-  const { SO, type, designer } = req.query;
+  const { SO, type, designer, color } = req.query;
 
-  const gear = await getAllGear(SO, type, designer);
+  const gear = await getAllGear(SO, type, designer, color);
   if (gear) {
     res.json({
       success: true,

@@ -46,6 +46,7 @@ CREATE TABLE users (
     address TEXT,
     zipcode INT,
     rating INT,
+    customerType TEXT NOT NULL,
     admin BOOLEAN DEFAULT false,
     joinedDate TIMESTAMP DEFAULT NOW()
 );
