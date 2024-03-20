@@ -2,6 +2,7 @@ const express = require("express");
 const itemController = express();
 const { getAllGear } = require("../queries/gear");
 const { getOneGear } = require("../queries/gear");
+const { filterGearDesigner } = require("../queries/gear");
 
 // * gear
 itemController.get("/", async (req, res) => {
