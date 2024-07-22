@@ -6,6 +6,7 @@
   "scripts": {
     "db:init": "psql -U postgres -f db/schema.sql",
     "db:seed": "psql -U postgres -f db/seed.sql",
+    "db:boot": "npm run db:init && npm run db:seed && echo 'Database initialized and seeded' && npm start",
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
